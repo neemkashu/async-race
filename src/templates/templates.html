@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <button class="button__garage">
+            to garage
+        </button>
+        <button class="button__winners">
+            to winners
+        </button>
+    </header>
+    <main class="main">
+        <h1 class="garage__header">
+            Winners (<span id="${this.elementsIDs.totalWinAmount}"></span>)
+        </h1>
+        <div class="garage__page-control">
+            <h2 class="garage__page">
+                Page #<span id="${this.elementsIDs.winnerPage}">4</span>
+            </h2>
+            <button id="${this.elementsIDs.previousPage}">◀</button>
+            <button id="${this.elementsIDs.nextPage}">▶</button>
+        </div>
+        <div table__header>
+            <table class="table-winners">
+                <thead>
+                    <tr>
+                        <th class="table-header">ID</th>
+                        <th class="table-header">Car</th>
+                        <th class="table-header">Name</th>
+                        <th class="table-header">Wins 🏆<span>⬆</span></th>
+                        <th class="table-header">Best time <br>
+                            (in seconds)⏲<span>⬆</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>${car.pictureSVG}</td>
+                        <td>Tesla</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>${car.pictureSVG}</td>
+                        <td>Tesla</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>${car.pictureSVG}</td>
+                        <td>Tesla</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+</body>
+
+</html>

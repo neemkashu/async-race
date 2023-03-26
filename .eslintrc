@@ -1,0 +1,78 @@
+{
+    "plugins": [
+        "@typescript-eslint",
+        "import"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-base"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "root": true,
+    "ignorePatterns": [
+        "*config.js"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
+    "rules": {
+        "no-debugger": "off",
+        "no-console": 0,
+        "import/extensions": [
+            0,
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "off",
+        "class-methods-use-this": "off",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/explicit-member-accessibility": "error",
+        "no-unused-vars": "off",
+        "linebreak-style": 0,
+        "indent": [
+            "error",
+            4
+        ],
+        "lines-between-class-members": "off",
+        "import/prefer-default-export": "off",
+        "max-len": [
+            "error",
+            {
+                "code": 120
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            "only-multiline"
+        ],
+        "function-paren-newline": [
+            "error",
+            "multiline"
+        ]
+    }
+}

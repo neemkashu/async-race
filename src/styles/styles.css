@@ -1,0 +1,191 @@
+:root {
+    --primary-color: rgb(195, 225, 150);
+    --secondary-color: rgb(45, 45, 45);
+    --bright-color: rgb(240, 234, 39);
+    --table-color: rgb(234, 231, 155);
+    --border-color: rgb(96, 122, 99);
+
+    --small-gap: 10px;
+    --tiny-gap: 5px;
+
+    --width-medium: 700px;
+
+    --font-size-base: 10px;
+    --font-size-h1: 2.2rem;
+    --font-size-h2: 1.8rem;
+    --font-size-regular: 1.6rem;
+
+    --size-car: 2rem;
+}
+
+html {
+    font-size: var(--font-size-base);
+}
+
+body {
+    position: relative;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--tiny-gap);
+    padding-left: var(--tiny-gap);
+    padding-right: var(--tiny-gap);
+    min-height: 100vh;
+    margin: 0;
+    font-size: var(--font-size-regular);
+}
+
+button {
+    transition: all 0.3s ease-out;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.header {
+    padding-top: var(--tiny-gap);
+}
+
+.main {
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+}
+
+.car-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tiny-gap);
+}
+
+.car-redactor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--tiny-gap);
+}
+
+.garage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+}
+
+.garage__header {
+    font-size: var(--font-size-h1);
+}
+
+.garage__page-control {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--tiny-gap);
+}
+
+.garage__page {
+    font-size: var(--font-size-h2);
+}
+
+.garage__tracks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+}
+
+.track__race {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tiny-gap);
+}
+
+.track__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--tiny-gap);
+}
+
+.race-picture {
+    width: var(--size-car);
+}
+
+.race-car-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+
+.track__race-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tiny-gap);
+}
+
+.track__race-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--tiny-gap);
+    align-items: flex-end;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--small-gap);
+    justify-content: center;
+    align-content: center;
+}
+
+.footer__logo {
+    display: block;
+    align-self: center;
+    background: no-repeat;
+    background-image: url(https://rs.school/images/rs_school_js.svg);
+    height: 30px;
+    width: 70px;
+}
+
+.footer__github {
+    display: block;
+    align-self: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 10;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.message__text {
+    background-color: var(--bright-color);
+    font-size: 2.2rem;
+}
+
+.winner-table-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+    max-width: var(--width-medium);
+}
+
+.table-winners {
+    text-align: center;
+    border: 2px solid var(--border-color);
+}
+
+.table-header {
+    background-color: var(--bright-color);
+}
+
+td {
+    padding: var(--tiny-gap);
+}
