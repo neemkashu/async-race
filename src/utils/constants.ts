@@ -3,7 +3,7 @@ export enum HeaderTabs {
     GARAGE,
     WINNERS,
 }
-const SERVER_ADDRESS = 'http://127.0.0.1:3000';
+const SERVER_ADDRESS = 'https://glowing-inconclusive-caravel.glitch.me';
 const MAX_CAR_NAME = 30;
 const MIN_CAR_NAME = 1;
 const DEFAULT_TRACK_LENGTH = 300;
