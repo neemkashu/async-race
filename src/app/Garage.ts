@@ -250,7 +250,7 @@ class Garage extends Component<GarageElements> {
         </h1>
         <div class="garage__page-control">
             <h2 class="garage__page">
-            Page #<span id="${this.elementsIDs.garagePage}">${this.page}</span>
+            Page #<span id="${this.elementsIDs.garagePage}">${this.page ?? 'Loading'}</span>
             </h2>
             <button id="${this.elementsIDs.previousPage}">◀</button>
             <button id="${this.elementsIDs.nextPage}">▶</button>

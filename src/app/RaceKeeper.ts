@@ -85,9 +85,6 @@ export class RaceKeeper {
             if (!isDone) {
                 this.drawCarAtPosition(passedFractionX);
                 this.raceData.currentPosition = this.getCoordinateFromFraction(passedFractionX);
-            } else {
-                // TODO: draw precision final state of the car if code 200
-                console.log('done!');
             }
         }
         if (timePassed < animationDuration) {
@@ -121,7 +118,6 @@ export class RaceKeeper {
                 throw new CarError('Drive engine error', response.status, this.car.id);
             }
             const code = response.status;
-            console.log('code', code);
             return ResponseStatuses.SUCCESS;
         } catch (error) {
             if (error instanceof CarError) {
