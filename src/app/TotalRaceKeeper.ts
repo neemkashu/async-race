@@ -44,11 +44,9 @@ export class TotalRaceKeeper {
                 .catch((error) => {
                     console.warn('Some error when writing race result');
                 });
-            console.log('write or update winner', finish.detail.id, finish.detail.time);
         }
         if (event.type === CustomEvents.CAR_RACE_END) {
             this.raceEndCount += 1;
-            // console.log('BUG WITH EXTRA LISTENERS this.raceEndCount', this.raceEndCount);
             const areAllCarsEndRace = this.raceEndCount === this.raceMembersAmount;
             if (areAllCarsEndRace) {
                 const noWinner = new CustomEvent(CustomEvents.NO_ONE_FINISH);
@@ -76,10 +74,10 @@ export class TotalRaceKeeper {
             const bestTime = this.getBestTime(winner, winnerInfo);
             winnerInfo.wins += 1;
             winnerInfo.time = bestTime;
-            this.updateWinner(winnerInfo);
+            await this.updateWinner(winnerInfo);
         } else {
             const newWinner: WinnerInfoMedium = { ...winner, wins: 1 };
-            this.createWinner(newWinner);
+            await this.createWinner(newWinner);
         }
         return winnerInfo;
     }
